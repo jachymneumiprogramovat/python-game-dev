@@ -85,16 +85,26 @@ def kliknuti(x, y):
 def kdovyhral():
     for i in pole:
         if abs(sum(i))==3:
-            print("vyhral")
+            ukazatel.append(abs(sum(i)))
+            return"vyhral "+str(player)
+
     for i in range(3):
-        if abs(pole[0][i]+pole[1][i]+pole[2][i])==3 :
-            print("vyhral")
-    
+        if abs(pole[0][i]+pole[1][i]+pole[2][i])==3:
+            return"vyhral "+str(player)
+
     if abs(pole[0][0]+pole[1][1]+pole[2][2])==3:
-        print("vyhral")
-    
-    if abs(pole[0][2]+pole[1][1]+pole[2][0])==3:
-        print("vyhral")
+            return"vyhral "+str(player)
+    elif abs(pole[0][2]+pole[1][1]+pole[2][0])==3:
+            return"vyhral "+str(player)
+
+    for i in pole:
+        for j in range(3):
+            if i[j]==0:
+                return
+    if 1:
+        newGame()
+        return ('remíza je na stole kamarádi')
+
 pole = [
     [0, 0, 0],
     [0, 0, 0],
