@@ -78,7 +78,7 @@ def kliknuti(x, y):
             krizek(center[0], center[1], poloměr)
         else:
             kolecko(center[0], center[1], poloměr)
-        kdovyhral()
+        print(kdovyhral())
         player = -player
 
 
