@@ -105,6 +105,19 @@ def kdovyhral():
         newGame()
         return ('remíza je na stole kamarádi')
 
+    
+def newGame():
+    global pole, player
+    pen.clear()
+    tabulka(-hranice, -hranice, HraciPole)
+    
+    pole = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+    ]
+    player = 1
+
 pole = [
     [0, 0, 0],
     [0, 0, 0],
